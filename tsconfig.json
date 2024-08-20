@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "allowJs": false, // 不允许编译.js文件
+        "allowSyntheticDefaultImports": true, // 允许模块中使用import x from y，即使模块没有默认导出
+        "declaration": true, // 生成.d.ts文件（这些文件可以描述ts类型信息）
+        "declarationMap": false, // 不生成声明文件的源映射
+        "emitDeclarationOnly": false, // 不仅生成声明文件，还生成js文件（如果设置为true那么只生成.d.ts文件）
+        "noEmit": false, // 允许ts编译器生成输出文件（如果设置为true，不会生成输出文件，只执行类型检查）
+        "esModuleInterop": true, // 启动es和commonjs模块间的互操作性支持
+        "inlineSourceMap": false, // 不在生成的js文件中嵌入源映射信息
+        "lib": ["esnext"], // 包含编译时需要的库文件
+        "listEmittedFiles": false, // 不列出编译器生成的文件
+        "listFiles": false, // 不列出编译器正在处理的文件
+        "moduleResolution": "node", // 使用nodejs模块解析策略
+        "noFallthroughCasesInSwitch": true, // 防止switch语句中的case子句掉入下一个case
+        "pretty": true, // 生成编译器输出
+        "resolveJsonModule": true, // 允许从.json文件中倒入模块
+        "skipLibCheck": true, // 跳过库文件的类型检查（例如nodu_modules中的声明文件）
+        "strict": true, // 启用所有严格类型检查
+        "traceResolution": false, // 不跟踪并报告模块解析的详细信息
+        "jsx": "react", // 指定jsx语法的编译方式
+        "types": ["cypress", "react", "react-dom", "uuid"], // ts只会加载这些库的类型定义，而忽略其他未列出的库
+        "baseUrl": "./", // 设置解析非相对模块名的基本目录
+        "paths": {
+            "@bajs/*": ["./packages/*/", "./docs/*/"] // 配置路径别名，@bajs/*可以代替"./packages/*/", "./docs/*/"路径
+        }
+    },
+    "compileOnSave": false, // 禁止在保存文件时自动编译
+    "exclude": ["node_modules", "build"] // 排除不需要编译的目录
+}

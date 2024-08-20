@@ -1,0 +1,7 @@
+node_modules
+coverage
+package-lock.json
+.vscode
+.DS_Store
+build
+types
